@@ -1,7 +1,5 @@
-
-mod pair;
 mod cow;
+mod pair;
 
-pub use pair::PointerValuePair;
 pub use cow::Cow;
-
+pub use pair::{PointerValuePair, PointerValuePairAccess};
