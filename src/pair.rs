@@ -82,7 +82,13 @@ impl<T> PointerValuePair<T> {
 
 #[cfg(test)]
 mod tests {
+    use std::mem;
     use super::PointerValuePair;
+
+    #[test]
+    fn pointer_sized() {
+        assert_eq!(mem::size_of::<*const i32>(), mem::size_of::<PointerValuePair<i32>>());
+    }
 
     #[test]
     fn basic_get_set() {

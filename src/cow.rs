@@ -95,7 +95,13 @@ impl<'a, T> Deref for Cow<'a, T> {
 #[cfg(test)]
 mod tests {
     use std::cell::Cell;
+    use std::mem;
     use crate::Cow;
+
+    #[test]
+    fn pointer_sized() {
+        assert_eq!(mem::size_of::<*const i32>(), mem::size_of::<Cow<'static,i32>>());
+    }
 
     #[test]
     fn owned_cow_drop() {
