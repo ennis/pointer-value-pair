@@ -1,6 +1,13 @@
 [package]
 name = "pointer-value-pair"
+description = "A pair of a pointer and a small integer packed into a pointer-sized object"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/ennis/pointer-value-pair"
+authors = ["Alexandre Bléron <alex.bleron@gmail.com>"]
+categories = ["data-structures"]
+keywords = ["pointer"]
 
 [dependencies]
